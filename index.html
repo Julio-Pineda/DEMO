@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html class="light" lang="es">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Halsa Lab - Suplementos de Alta Pureza</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "clinical-blue": "#0047AB",
+                        "surface-variant": "#e0e3e5",
+                        "on-surface-variant": "#434653",
+                        "surface-container-low": "#f2f4f6",
+                        "surface-container-highest": "#e0e3e5",
+                        "surface": "#f7f9fb",
+                        "sterile-white": "#FFFFFF",
+                        "on-surface": "#191c1e",
+                        "lab-green": "#00A86B",
+                        "primary-container": "#0047ab"
+                    },
+                    "spacing": {
+                        "margin-mobile": "20px",
+                        "gutter": "24px",
+                        "margin-desktop": "80px",
+                        "max-width": "1280px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Inter"],
+                        "body-sm": ["Inter"],
+                        "label-md": ["Inter"],
+                        "headline-md": ["Hanken Grotesk"],
+                        "headline-sm": ["Hanken Grotesk"],
+                        "display-lg": ["Hanken Grotesk"]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Hanken Grotesk', sans-serif; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface antialiased pt-16">
+
+    <!-- TopNavBar -->
+    <nav class="bg-sterile-white border-b border-surface-variant fixed top-0 w-full z-50">
+        <div class="flex justify-between items-center h-16 px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto">
+            <div class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-clinical-blue" data-icon="science">science</span>
+                <span class="text-xl font-headline-md font-bold text-clinical-blue">Halsa Lab</span>
+            </div>
+            <div class="hidden md:flex space-x-8 items-center">
+                <a class="text-clinical-blue border-b-2 border-clinical-blue font-bold pb-1 font-label-md text-xs tracking-wider" href="#">INICIO</a>
+                <a class="text-on-surface-variant font-label-md text-xs tracking-wider hover:text-clinical-blue transition-colors" href="#">NOSOTROS</a>
+                <a class="text-on-surface-variant font-label-md text-xs tracking-wider hover:text-clinical-blue transition-colors" href="#">SUPLEMENTOS</a>
+            </div>
+            <div class="flex items-center gap-4">
+                <button class="bg-clinical-blue text-white px-4 py-2 rounded font-label-md text-xs font-bold hover:opacity-90 transition-opacity">Contáctanos</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative w-full h-[60vh] min-h-[500px] flex items-center justify-start overflow-hidden">
+        <div class="absolute inset-0 z-0 bg-surface-container-low">
+            <img alt="Hero Lab" class="w-full h-full object-cover opacity-60" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQ2WKUrM111XSYpw-Bjr8UGLSF1Ze_T26WguY_1sJIXV-Y1kd36MSwozoEgPlMej138vdnyKYVLLQ3oHitseQ0khTIAkkjXHrbs1SpLiYTZAY0C2iz082t28Kmx46yOoEDBpSjszGYE9P1yamJ6YbbP6GHtaEeLmlBECDxwONK1v9_pWhRJwEFkNPVUtuA5_fqN4Pi2IYShR4BNWupw81MUepYe0kPY95Z8tN1j0rdyAdgcmfa3i6ekz_mPxdMrrDrExeayphGzfrD"/>
+            <div class="absolute inset-0 bg-gradient-to-r from-sterile-white/95 via-sterile-white/70 to-sterile-white/20"></div>
+        </div>
+        <div class="relative z-10 max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop w-full">
+            <div class="max-w-2xl">
+                <span class="inline-block px-3 py-1 bg-surface-variant text-clinical-blue font-bold text-xs tracking-widest rounded mb-6 border border-surface-container-highest">
+                    LABORATORIO DE ESPECIALIDAD
+                </span>
+                <h1 class="text-4xl md:text-5xl font-display-lg text-on-surface mb-4 leading-tight">
+                    El Poder de la Naturaleza,<br>Validado por la Ciencia.
+                </h1>
+                <p class="text-base md:text-lg font-body-md text-on-surface-variant mb-8 max-w-xl">
+                    Formulamos suplementos de alta pureza. Pequeños lotes, control estricto y materias primas extraordinarias para tu bienestar.
+                </p>
+                <button class="bg-clinical-blue text-white px-6 py-3 rounded text-sm font-bold shadow-lg hover:bg-primary-container transition-colors w-full md:w-auto">
+                    Ver Catálogo Premium
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==========================================
+         SECCIÓN SCROLL SEQUENCE (Optimizada Móvil)
+         ========================================== -->
+    <section id="scroll-sequence-section" class="relative w-full bg-surface-container-low border-t border-surface-variant h-[300vh] md:h-[250vh]">
+        
+        <!-- Contenedor Sticky -->
+        <div class="sticky top-16 md:top-24 max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop py-6 md:py-12 flex flex-col md:flex-row items-center justify-center gap-6 md:gap-16 min-h-[calc(100vh-4rem)]">
+            
+            <!-- Derecha en PC / Arriba en Móvil: Recuadro pequeño con el Canvas -->
+            <!-- Usamos order-1 en móvil para que el gráfico se vea primero al hacer scroll -->
+            <div class="w-full md:w-1/2 flex justify-center md:justify-end items-center order-1 md:order-2">
+                <div class="w-full max-w-[280px] sm:max-w-sm md:max-w-md aspect-[4/3] bg-sterile-white p-2 md:p-3 rounded-xl shadow-[0_10px_30px_rgba(0,0,0,0.1)] border border-surface-variant relative">
+                    <div class="w-full h-full rounded border border-surface-variant/50 overflow-hidden bg-black relative">
+                        <canvas id="secuencia-canvas" class="w-full h-full object-cover"></canvas>
+                        
+                        <!-- Indicador visual -->
+                        <div id="scroll-indicator" class="absolute bottom-2 md:bottom-4 left-0 right-0 flex justify-center transition-opacity duration-300">
+                            <span class="material-symbols-outlined text-white animate-bounce bg-black/50 rounded-full p-1 text-sm md:text-base">south</span>
+                        </div>
+                    </div>
+                    <!-- Etiqueta debajo del cuadro -->
+                    <div class="mt-2 md:mt-4 flex justify-between items-center px-1">
+                        <span class="text-[10px] md:text-xs font-bold text-on-surface-variant tracking-wider uppercase">Agrega tu marca</span>
+                        <span class="w-2 h-2 rounded-full bg-lab-green animate-pulse"></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Izquierda en PC / Abajo en Móvil: Textos informativos -->
+            <!-- Usamos order-2 en móvil -->
+            <div class="w-full md:w-1/2 flex flex-col justify-center order-2 md:order-1 text-center md:text-left">
+                
+                <span class="material-symbols-outlined text-clinical-blue text-3xl md:text-4xl mb-2 md:mb-4 hidden md:block">
+                    biotech
+                </span>
+
+                <h2 class="text-2xl sm:text-3xl md:text-4xl font-headline-md text-on-surface mb-6">
+                    Maquila y Desarrollo de Marca
+                </h2>
+
+                <ul class="space-y-3 text-left mb-6">
+                    <li class="flex items-start gap-3">
+                        <span class="material-symbols-outlined text-green-600 mt-1">check_circle</span>
+                        <p class="text-sm md:text-base text-on-surface-variant font-body-md">
+                            Transformamos tu idea en un producto listo para el mercado.
+                        </p>
+                    </li>
+
+                    <li class="flex items-start gap-3">
+                        <span class="material-symbols-outlined text-green-600 mt-1">check_circle</span>
+                        <p class="text-sm md:text-base text-on-surface-variant font-body-md">
+                            Servicio integral de maquila con procesos controlados y calidad consistente.
+                        </p>
+                    </li>
+
+                    <li class="flex items-start gap-3">
+                        <span class="material-symbols-outlined text-green-600 mt-1">check_circle</span>
+                        <p class="text-sm md:text-base text-on-surface-variant font-body-md">
+                            Desarrollo de marca propia sin necesidad de infraestructura productiva.
+                        </p>
+                    </li>
+
+                    <li class="flex items-start gap-3">
+                        <span class="material-symbols-outlined text-green-600 mt-1">check_circle</span>
+                        <p class="text-sm md:text-base text-on-surface-variant font-body-md">
+                            Nos encargamos de formulación, producción y acondicionamiento.
+                        </p>
+                    </li>
+                </ul>
+
+                <div class="text-xs md:text-sm text-on-surface-variant font-body-md bg-white p-3 md:p-4 border-l-4 border-clinical-blue rounded-r-md shadow-sm text-left">
+                    <strong>Desliza hacia abajo</strong> para conocer el proceso completo, desde el desarrollo hasta la entrega final.
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ==========================================
+         SECCIÓN: PRODUCTOS PREMIUM
+         ========================================== -->
+    <section class="py-16 md:py-24 bg-sterile-white border-t border-surface-variant">
+        <div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
+            <div class="text-center mb-10 md:mb-16">
+                <span class="inline-block px-3 py-1 bg-surface-container-low text-clinical-blue font-bold text-xs tracking-widest rounded mb-4">LÍNEA DE SUPLEMENTOS</span>
+                <h2 class="text-3xl md:text-4xl font-headline-md text-on-surface">Pureza en cada fórmula</h2>
+                <p class="text-on-surface-variant mt-4 max-w-2xl mx-auto text-sm md:text-base">Nuestros suplementos están elaborados bajo estrictos controles de laboratorio, utilizando materia prima estandarizada para garantizar eficacia real.</p>
+            </div>
+
+            <!-- Grid de 6 Productos -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                
+                <!-- 1. Vinagre de Jengibre -->
+                <div class="bg-surface rounded-xl border border-surface-variant overflow-hidden group hover:shadow-xl transition-all duration-300">
+                    <div class="h-48 md:h-56 bg-surface-container-highest p-6 relative flex justify-center">
+                        <img alt="Vinagre de Jengibre" src="https://images.pexels.com/photos/13779105/pexels-photo-13779105.jpeg" class="h-full object-contain group-hover:scale-105 transition-transform duration-500"/>
+                        <span class="absolute top-3 left-3 bg-white text-clinical-blue text-[10px] font-bold px-2 py-1 rounded shadow-sm uppercase tracking-wide border border-surface-variant">Líquido</span>
+                    </div>
+                    <div class="p-5 md:p-6">
+                        <h3 class="text-lg md:text-xl font-headline-sm text-on-surface mb-2">Extracto de Vinagre & Jengibre</h3>
+                        <p class="text-xs md:text-sm text-on-surface-variant mb-4 line-clamp-2">Formulación sinérgica que apoya la digestión y el metabolismo. Fermentado natural estandarizado.</p>
+                        <button class="w-full border border-clinical-blue text-clinical-blue py-2 rounded text-sm font-bold hover:bg-clinical-blue hover:text-white transition-colors">Detalles</button>
+                    </div>
+                </div>
+
+                <!-- 2. Orégano -->
+                <div class="bg-surface rounded-xl border border-surface-variant overflow-hidden group hover:shadow-xl transition-all duration-300">
+                    <div class="h-48 md:h-56 bg-surface-container-highest p-6 relative flex justify-center">
+                        <img alt="Orégano" src="https://images.pexels.com/photos/37000755/pexels-photo-37000755.jpeg" class="h-full object-contain group-hover:scale-105 transition-transform duration-500"/>
+                        <span class="absolute top-3 left-3 bg-white text-lab-green text-[10px] font-bold px-2 py-1 rounded shadow-sm uppercase tracking-wide border border-surface-variant">Gotas / Aceite</span>
+                    </div>
+                    <div class="p-5 md:p-6">
+                        <h3 class="text-lg md:text-xl font-headline-sm text-on-surface mb-2">Aceite Esencial de Orégano</h3>
+                        <p class="text-xs md:text-sm text-on-surface-variant mb-4 line-clamp-2">Alta concentración de Carvacrol. Potente soporte inmunológico y antioxidante extraído en frío.</p>
+                        <button class="w-full border border-clinical-blue text-clinical-blue py-2 rounded text-sm font-bold hover:bg-clinical-blue hover:text-white transition-colors">Detalles</button>
+                    </div>
+                </div>
+
+                <!-- 3. Melena de León -->
+                <div class="bg-surface rounded-xl border border-surface-variant overflow-hidden group hover:shadow-xl transition-all duration-300">
+                    <div class="h-48 md:h-56 bg-surface-container-highest p-6 relative flex justify-center">
+                        <img alt="Melena de Leon" src="https://images.pexels.com/photos/28879521/pexels-photo-28879521.jpeg" class="h-full object-contain group-hover:scale-105 transition-transform duration-500"/>
+                        <span class="absolute top-3 left-3 bg-white text-clinical-blue text-[10px] font-bold px-2 py-1 rounded shadow-sm uppercase tracking-wide border border-surface-variant">Cápsulas</span>
+                    </div>
+                    <div class="p-5 md:p-6">
+                        <h3 class="text-lg md:text-xl font-headline-sm text-on-surface mb-2">Hongo Melena de León</h3>
+                        <p class="text-xs md:text-sm text-on-surface-variant mb-4 line-clamp-2">Extracto de cuerpo fructífero al 10:1. Soporte neurotrófico validado para la memoria y enfoque.</p>
+                        <button class="w-full border border-clinical-blue text-clinical-blue py-2 rounded text-sm font-bold hover:bg-clinical-blue hover:text-white transition-colors">Detalles</button>
+                    </div>
+                </div>
+
+                <!-- 4. Citrato de Magnesio -->
+                <div class="bg-surface rounded-xl border border-surface-variant overflow-hidden group hover:shadow-xl transition-all duration-300">
+                    <div class="h-48 md:h-56 bg-surface-container-highest p-6 relative flex justify-center">
+                        <img alt="Citrato Magnesio" src="https://images.pexels.com/photos/13779116/pexels-photo-13779116.jpeg" class="h-full object-contain group-hover:scale-105 transition-transform duration-500"/>
+                        <span class="absolute top-3 left-3 bg-white text-clinical-blue text-[10px] font-bold px-2 py-1 rounded shadow-sm uppercase tracking-wide border border-surface-variant">Polvo Biodisponible</span>
+                    </div>
+                    <div class="p-5 md:p-6">
+                        <h3 class="text-lg md:text-xl font-headline-sm text-on-surface mb-2">Citrato de Magnesio Puro</h3>
+                        <p class="text-xs md:text-sm text-on-surface-variant mb-4 line-clamp-2">Alta biodisponibilidad para máxima absorción. Esencial para la relajación muscular y sistema nervioso.</p>
+                        <button class="w-full border border-clinical-blue text-clinical-blue py-2 rounded text-sm font-bold hover:bg-clinical-blue hover:text-white transition-colors">Detalles</button>
+                    </div>
+                </div>
+
+                <!-- 5. Omega 3 -->
+                <div class="bg-surface rounded-xl border border-surface-variant overflow-hidden group hover:shadow-xl transition-all duration-300">
+                    <div class="h-48 md:h-56 bg-surface-container-highest p-6 relative flex justify-center">
+                        <img alt="Omega 3" src="https://images.pexels.com/photos/14923542/pexels-photo-14923542.jpeg" class="h-full object-contain group-hover:scale-105 transition-transform duration-500"/>
+                        <span class="absolute top-3 left-3 bg-white text-clinical-blue text-[10px] font-bold px-2 py-1 rounded shadow-sm uppercase tracking-wide border border-surface-variant">Softgels</span>
+                    </div>
+                    <div class="p-5 md:p-6">
+                        <h3 class="text-lg md:text-xl font-headline-sm text-on-surface mb-2">Omega 3 (EPA & DHA)</h3>
+                        <p class="text-xs md:text-sm text-on-surface-variant mb-4 line-clamp-2">Aceite de pescado destilado molecularmente, libre de metales pesados. Grado farmacéutico.</p>
+                        <button class="w-full border border-clinical-blue text-clinical-blue py-2 rounded text-sm font-bold hover:bg-clinical-blue hover:text-white transition-colors">Detalles</button>
+                    </div>
+                </div>
+
+                <!-- 6. Biotina de Colágeno -->
+                <div class="bg-surface rounded-xl border border-surface-variant overflow-hidden group hover:shadow-xl transition-all duration-300">
+                    <div class="h-48 md:h-56 bg-surface-container-highest p-6 relative flex justify-center">
+                        <img alt="Biotina y Colágeno" src="https://images.pexels.com/photos/28879524/pexels-photo-28879524.jpeg" class="h-full object-contain group-hover:scale-105 transition-transform duration-500"/>
+                        <span class="absolute top-3 left-3 bg-white text-lab-green text-[10px] font-bold px-2 py-1 rounded shadow-sm uppercase tracking-wide border border-surface-variant">Cápsulas</span>
+                    </div>
+                    <div class="p-5 md:p-6">
+                        <h3 class="text-lg md:text-xl font-headline-sm text-on-surface mb-2">Colágeno Hidrolizado + Biotina</h3>
+                        <p class="text-xs md:text-sm text-on-surface-variant mb-4 line-clamp-2">Péptidos bioactivos combinados con Vitamina B7 para el fortalecimiento estructural de piel y cabello.</p>
+                        <button class="w-full border border-clinical-blue text-clinical-blue py-2 rounded text-sm font-bold hover:bg-clinical-blue hover:text-white transition-colors">Detalles</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         SECCIÓN: INSTAGRAM / COMUNIDAD
+         ========================================== -->
+<!-- ==========================================
+         SECCIÓN: INSTAGRAM / COMUNIDAD
+         ========================================== -->
+    <section class="py-16 md:py-24 bg-surface-container-low border-t border-surface-variant overflow-hidden">
+        <div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
+            
+            <div class="flex flex-col md:flex-row items-center justify-between gap-12 lg:gap-16">
+                
+                <!-- Columna Izquierda: Textos y Botón -->
+                <div class="w-full md:w-1/2 flex flex-col justify-center text-center md:text-left order-1 md:order-1">
+                    
+                    <span class="inline-block px-3 py-1 bg-surface-variant text-clinical-blue font-bold text-xs tracking-widest rounded mb-6 self-center md:self-start border border-surface-container-highest">
+                        NUESTRA COMUNIDAD
+                    </span>
+                    
+                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-headline-md text-on-surface mb-4">
+                        Detrás del Laboratorio
+                    </h2>
+                    
+                    <p class="text-base md:text-lg text-on-surface-variant mb-8 max-w-lg mx-auto md:mx-0 font-body-md">
+                        Descubre nuestros procesos de fabricación, consejos de especialistas en salud y entérate antes que nadie de nuestros nuevos lanzamientos. Acompáñanos en nuestro día a día.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row items-center gap-4 justify-center md:justify-start">
+                        <a href="https://www.instagram.com/halsa_lab" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 bg-clinical-blue text-white px-6 py-3 rounded text-sm font-bold shadow-lg hover:bg-primary-container transition-colors w-full sm:w-auto justify-center">
+                            <!-- Icono de Instagram en SVG -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                            Seguir a @halsa_lab
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Columna Derecha: Embebido de Instagram -->
+                <div class="w-full md:w-1/2 flex justify-center order-2 md:order-2">
+                    <div class="w-full max-w-[400px] lg:max-w-[450px] bg-sterile-white p-2 rounded-2xl shadow-[0_10px_40px_rgba(0,0,0,0.08)] border border-surface-variant transform transition-transform hover:scale-[1.02] duration-500">
+                        <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/Dal56p-kQgE/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:12px; box-shadow:none; margin: 0; max-width:100%; min-width:100%; padding:0; width:100%;">
+                            <div style="padding:16px;">
+                                <a href="https://www.instagram.com/p/Dal56p-kQgE/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> 
+                                    <div style=" display: flex; flex-direction: row; align-items: center;">
+                                        <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> 
+                                        <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> 
+                                            <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> 
+                                            <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div>
+                                        </div>
+                                    </div>
+                                    <div style="padding: 19% 0;"></div> 
+                                    <div style="display:block; height:50px; margin:0 auto 12px; width:50px;">
+                                        <svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink">
+                                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g>
+                                        </svg>
+                                    </div>
+                                    <div style="padding-top: 8px;"> 
+                                        <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">Ver esta publicación en Instagram</div>
+                                    </div>
+                                    <div style="padding: 12.5% 0;"></div> 
+                                    <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;">
+                                        <div> 
+                                            <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> 
+                                            <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> 
+                                            <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div>
+                                        </div>
+                                        <div style="margin-left: 8px;"> 
+                                            <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> 
+                                            <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div>
+                                        </div>
+                                        <div style="margin-left: auto;"> 
+                                            <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> 
+                                            <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> 
+                                            <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div>
+                                        </div>
+                                    </div> 
+                                    <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> 
+                                        <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> 
+                                        <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div>
+                                    </div>
+                                </a>
+                                <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">
+                                    <a href="https://www.instagram.com/p/Dal56p-kQgE/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">Una publicación compartida por Hälsa Lab (@halsa_lab)</a>
+                                </p>
+                            </div>
+                        </blockquote>
+                        <!-- AQUÍ ESTÁ EL ARREGLO: Agregado el https: al inicio -->
+                        <script async src="https://www.instagram.com/embed.js"></script>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-surface-container-low border-t border-surface-variant w-full py-8 md:py-12">
+        <div class="text-center px-4">
+            <div class="flex items-center justify-center gap-2 mb-4">
+                <span class="material-symbols-outlined text-clinical-blue">science</span>
+                <span class="text-lg font-headline-md font-bold text-clinical-blue">Halsa Lab</span>
+            </div>
+            <p class="text-xs md:text-sm text-on-surface-variant">© 2024 Halsa Lab. Elaborado con los más altos estándares de calidad.</p>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div id="demoModal" class="fixed inset-0 bg-black/60 flex items-center justify-center hidden z-[100] px-4">
+        <div class="bg-white rounded-lg shadow-2xl max-w-sm w-full p-6 text-center">
+            <h2 class="text-xl font-bold mb-2">Demostración</h2>
+            <p class="text-sm text-gray-600 mb-6">
+                Esta es una versión demo del sistema. Muchas funcionalidades están limitadas.
+            </p>
+            <button id="closeModal" class="w-full px-4 py-3 bg-clinical-blue text-white rounded font-bold shadow hover:bg-primary-container transition-colors">
+                Entendido
+            </button>
+        </div>
+    </div>
+
+    <!-- ==========================================
+         JAVASCRIPT: LÓGICA SCROLL 3D OPTIMIZADA
+         ========================================== -->
+    <script>
+        const canvas = document.getElementById("secuencia-canvas");
+        const context = canvas.getContext("2d");
+        const section = document.getElementById("scroll-sequence-section");
+        const scrollIndicator = document.getElementById("scroll-indicator");
+
+        const frameCount = 9; 
+        
+        // Función que busca tus imágenes locales
+        const currentFrame = index => (`img/${index}.jpg`);
+
+        const images = [];
+        let imagesLoaded = 0;
+
+        // Función para renderizar el frame (con Fallback por si la imagen no existe)
+        const renderFrame = (index) => {
+            const img = images[index];
+            // Verificamos si la imagen cargó correctamente
+            if (img && img.complete && img.naturalWidth > 0) {
+                // Configuramos resolución interna del canvas basada en la imagen
+                canvas.width = img.width;
+                canvas.height = img.height;
+                context.drawImage(img, 0, 0);
+            } else {
+                // FALLBACK: Si no tienes las imágenes puestas aún, dibuja un placeholder
+                canvas.width = 800;
+                canvas.height = 600;
+                context.fillStyle = "#e0e3e5";
+                context.fillRect(0, 0, canvas.width, canvas.height);
+                context.fillStyle = "#0047AB";
+                context.font = "bold 60px Inter";
+                context.textAlign = "center";
+                context.textBaseline = "middle";
+                context.fillText(`FRAME ${index + 1}`, canvas.width/2, canvas.height/2);
+            }
+        };
+
+        const preloadImages = () => {
+            for (let i = 1; i <= frameCount; i++) {
+                const img = new Image();
+                img.src = currentFrame(i);
+                
+                // Forzar render de la primera imagen rápido
+                img.onload = () => {
+                    imagesLoaded++;
+                    if (imagesLoaded === 1) renderFrame(0);
+                };
+                
+                // Si da error al cargar (ej. no has creado la carpeta img/), dibujará el placeholder
+                img.onerror = () => {
+                    if (i === 1) renderFrame(0);
+                };
+                
+                images.push(img);
+            }
+        };
+
+        preloadImages();
+
+        // OPTIMIZACIÓN MÓVIL: variables para evitar colapsar el evento Scroll
+        let ticking = false;
+
+        const updateScroll = () => {
+            const rect = section.getBoundingClientRect();
+            
+            // h-16 (menú en celular) = 64px de offset
+            const stickyOffset = 64; 
+            
+            const scrollStart = rect.top - stickyOffset;
+            const maxScrollableDistance = rect.height - window.innerHeight;
+            
+            let scrollFraction = -scrollStart / maxScrollableDistance;
+            scrollFraction = Math.max(0, Math.min(1, scrollFraction));
+
+            if (scrollFraction > 0.02) {
+                scrollIndicator.style.opacity = "0";
+            } else {
+                scrollIndicator.style.opacity = "1";
+            }
+
+            const frameIndex = Math.min(
+                frameCount - 1,
+                Math.floor(scrollFraction * frameCount)
+            );
+
+            // Renderizar solo si estamos viendo la sección
+            if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+                renderFrame(frameIndex);
+            }
+        };
+
+        // Escuchador de Scroll (passive: true es CRÍTICO para celulares)
+        window.addEventListener('scroll', () => {
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    updateScroll();
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        }, { passive: true });
+
+        // Render inicial por si no hay scroll al cargar
+        window.addEventListener('load', () => {
+            renderFrame(0);
+        });
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const modal = document.getElementById("demoModal");
+            const closeBtn = document.getElementById("closeModal");
+
+            modal.classList.remove("hidden");
+
+            closeBtn.addEventListener("click", function () {
+                modal.classList.add("hidden");
+            });
+
+            modal.addEventListener("click", function (e) {
+                if (e.target === modal) {
+                    modal.classList.add("hidden");
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
